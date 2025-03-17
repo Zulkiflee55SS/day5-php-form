@@ -27,15 +27,26 @@
         <div class="result">
             <h2>ผลลัพธ์:</h2>
             <?php
+            
+            error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+            
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $name = htmlspecialchars($_POST["name"]);
                 $email = htmlspecialchars($_POST["email"]);
                 $message = htmlspecialchars($_POST["message"]);
-
-                echo "<p><strong>ชื่อ:</strong> $name</p>";
-                echo "<p><strong>อีเมล:</strong> $email</p>";
-                echo "<p><strong>ข้อความ:</strong> $message</p>";
+            
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    echo "<p style='color: red;'>❌ รูปแบบอีเมลไม่ถูกต้อง!</p>";
+                } else {
+                    echo "<p><strong>✅ ชื่อ:</strong> $name</p>";
+                    echo "<p><strong>✅ อีเมล:</strong> $email</p>";
+                    echo "<p><strong>✅ ข้อความ:</strong> $message</p>";
+                }
             }
+            
+            
+            
             ?>
         </div>
     </div>
