@@ -1,0 +1,80 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* กล่องคอนเทนต์หลัก */
+.container {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;  /* ทำให้เป็นสี่เหลี่ยมมุมโค้ง */
+    text-align: left;  /* ทำให้ข้อความและฟอร์มอยู่ชิดซ้าย */
+}
+
+/* หัวข้อ */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* ฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ป้ายกำกับ (Label) */
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* อินพุตและเท็กซ์แอเรีย */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;  /* มุมโค้ง */
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ปรับขนาดช่องข้อความ */
+textarea {
+    height: 100px;
+}
+
+/* ปุ่ม */
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* กล่องผลลัพธ์ */
+.result {
+    margin-top: 20px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
